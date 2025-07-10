@@ -21,8 +21,8 @@ if ($respuesta != true) {
     
     // Si la eliminación fue exitosa, mostrar confirmación y redirigir
     echo "<script>
-        
-        location.href='../controllers/dashboard_ciudadano.php#solicitudes';
+        alert('Solicitud eliminada correctamente.');
+        location.href='../views/dash_reciclador_empresa.php#solicitudes';
     </script>";
 }
 ?>

@@ -19,10 +19,10 @@ if ($respuesta != true) {
     </script>";
 } else if($respuesta == true){
     
-    // Si la eliminación fue exitosa, mostrar confirmación y redirigir
+    // Si la aceptación fue exitosa, mostrar confirmación y redirigir
     echo "<script>
         alert('Solicitud aceptada correctamente.');
-        location.href='../controllers/dashboard_ciudadano.php#solicitudes';
+        location.href='../views/dash_reciclador_empresa.php#solicitudes';
     </script>";
 }
 ?>

@@ -306,8 +306,8 @@ include "../controllers/consultaUsuario.php";
                                                         <!-- Botón aceptar solicitud -->
                                                         <button class="btn btn-primary" data-bs-toggle="modal"
                                                             data-bs-target="#aceptarSolicitudModal"
-                                                            onclick="aceptarSolicitud('<?php echo $sol[0]; ?>'),'<?php echo htmlspecialchars($sol[3]); ?>'">
-                                                            <i class="fas fa-edit"></i>
+                                                            onclick="aceptarSolicitud('<?php echo $sol[0]; ?>')">
+                                                            <i class="fas fa-check"></i>
                                                         </button>
 
                                                         <!-- Botón Eliminar -->
@@ -377,6 +377,7 @@ include "../controllers/consultaUsuario.php";
     <?php include 'modal_publicacion.php'; ?>
     <?php include 'modal_ruta.php'; ?>
     <?php include 'modal_puntos_reciclaje.php'; ?>
+    <?php include 'modal_solicitud.php'; ?>
 
 
     <!-- JavaScript de Bootstrap -->
@@ -386,19 +387,15 @@ include "../controllers/consultaUsuario.php";
 
     <script>
         // Función para aceptar solicitud
-        function aceptarSolicitud(id, estado_peticion) {
-            // Cambiar título del modal
-            document.getElementById('formAceptar').textContent = "Editar Solicitud";
-
-            // Llenar campos del formulario
-            document.querySelector('id').value = tipo_residuo;
-            document.querySelector('[name="estado"]').value = cantidad;
+        function aceptarSolicitud(id) {
+            // Llenar el ID en el formulario de aceptación
+            document.getElementById('idAceptarSol').value = id;
         }
 
         // Función para preparar eliminación de solicitud
         function prepararEliminarSol(id) {
             document.getElementById('idEliminarSol').value = id;
         }
-</script>
+    </script>
 </body >
 </html >
