@@ -1,0 +1,90 @@
+:root {
+    --color-background: #101010;
+    --color-text: #ffffff;
+    --color-secondary-text: #bbbbbb;
+    --color-subtext: #aaaaaa;
+    --color-button: hsl(122, 39%, 49%);
+    --color-button-hover: #3a3a3a;
+    --text-shadow-color: rgba(0, 0, 0, 0.6);
+    --glow-start: rgba(200, 200, 200, 0.05);
+    --glow-end: rgba(0, 0, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.number{
+    font-size: 180px;
+    font-weight: bold;
+    color: var(--color-secondary-text);
+    text-shadow: 0 8px 15px var(--text-shadow-color);
+    margin-bottom: 20px;
+    position: relative;
+    letter-spacing: -5px;
+    transition: transform 0.1s ease-out;
+}
+
+.message {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.submessage {
+    font-size: 16px;
+    color: var(--color-subtext);
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.home-button {
+    background-color: var(--color-button);
+    color: var(--color-text);
+    border: none;
+    padding: 12px 40px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.home-button:hover {
+    background-color: var(--color-button-hover);
+    transform: scale(1.05);
+}
+
+.glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, var(--glow-start) 0%, var(--glow-end) 70%);
+    z-index: -1;
+    transition: transform 0.2s ease-out;
+}

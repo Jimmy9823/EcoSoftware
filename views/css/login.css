@@ -1,0 +1,290 @@
+
+/* ============================
+   PALETA DE COLORES GLOBAL
+   ============================ */
+   :root {
+    --text-color: #ffffff; /* Blanco para textos principales */
+    --text-input: #cccccc; /* Gris claro para texto de inputs */
+    --background-form: #1e1e1e; /* Fondo oscuro para formularios */
+    --primary-color: hsl(122, 39%, 49%); /* Verde principal */
+    --sombra-container: rgba(0, 0, 0, 0.34); /* Sombra suave */
+    --background-input: #2a2a2a; /* Fondo gris medio para inputs */
+}
+
+/* ============================
+   ESTILOS GENERALES
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* ============================
+   CONTENEDORES PRINCIPALES
+   ============================ */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    color: var(--text-color); /* Texto blanco */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-box {
+    width: 180px;
+    height: 80px;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+}
+
+.title h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* ============================
+   FORMULARIO DE INICIO DE SESIÓN
+   ============================ */
+.login-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    background-color: var(--background-form);
+    color: var(--text-color);
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px var(--sombra-container);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background-input);
+    font-size: 1rem;
+    color: var(--text-input);
+}
+
+input::placeholder {
+    color: var(--text-input);
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: var(--background-form);
+}
+
+.login-button a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+
+/* ============================
+   CAMPO DE CONTRASEÑA CON ÍCONO
+   ============================ */
+.password-wrapper {
+    position: relative;
+    height: 55px; /* Altura fija para superposición de inputs */
+}
+
+.password-wrapper input.password-field {
+    width: 100%;
+    height: 100%;
+    padding-right: 40px; /* Espacio para ícono */
+    padding-left: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background-input);
+    font-size: 1rem;
+    color: var(--text-input);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Placeholder en inputs de contraseña */
+input.password-field::placeholder {
+    color: var(--text-input);
+}
+
+/* Oculta campo de texto por defecto */
+.visible-password {
+    display: none;
+}
+
+/* Ícono de ojo */
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    color: var(--text-input);
+}
+
+/* Ícono de ojo cerrado oculto por defecto */
+.eye-icon i.fa-eye-slash {
+    display: none;
+}
+
+/* Mostrar/ocultar campos según el estado del checkbox */
+#togglePassword:checked ~ .hidden-password {
+    display: none;
+}
+
+#togglePassword:checked ~ .visible-password {
+    display: block;
+}
+
+/* Cambia íconos al alternar contraseña */
+#togglePassword:checked ~ .eye-icon i.fa-eye {
+    display: none;
+}
+
+#togglePassword:checked ~ .eye-icon i.fa-eye-slash {
+    display: inline;
+}
+
+/* ============================
+   OLVIDÉ MI CONTRASEÑA
+   ============================ */
+   .forgot-password {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.forgot-password a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* ============================
+   AUN NO TIENES CUENTA
+   ============================ */
+.account-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.account-message a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* ============================
+   PIE DE PÁGINA "Powered by"
+   ============================ */
+.powered-by {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    color: var(--text-input);
+    font-size: 0.9rem;
+}
+
+.powered-logo {
+    margin-right: 8px;
+}
+
+/* ============================
+   RESPONSIVE PARA MÓVILES
+   ============================ */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: auto;
+    }
+
+    .login-form {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .logo-section {
+        padding: 40px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title h1 {
+        font-size: 2rem;
+    }
+
+    .login-container {
+        padding: 20px;
+    }
+}
+

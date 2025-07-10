@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Configura el ancho para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EcoSoftware</title>
+
+    <!-- Íconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Enlace al archivo CSS personalizado -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<!-- Fondo con imagen oscurecida -->
+<body style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),url('img/login2.jpg');">
+
+    <div class="container">
+        <!-- Sección izquierda con logo y frase -->
+        <div class="logo-section">
+            <div class="logo">
+                <div class="logo-box">
+                    <img src="img/logo3.png" alt="Logo de EcoSoftware" class="logo-image">
+                </div>
+            </div>
+            <div class="title">
+                <h1>Cada acción cuenta,<br>cada residuo importa.</h1>
+            </div>
+        </div>
+
+        <!-- Sección derecha con el formulario -->
+        <div class="login-container">
+            <div class="login-form">
+                <h2>Bienvenidos Ecosofistas 🌱</h2>
+
+                <!-- Formulario de inicio de sesión -->
+                <form action="../controllers/usuarios/loginControlador.php" method="POST">
+
+                    <!-- Campo de correo -->
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="correo" placeholder="Ingrese su correo electrónico" required>
+                    </div>
+
+                    <!-- Campo de contraseña con opción de mostrar/ocultar -->
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="contraseña" placeholder="Ingrese su contraseña" required>
+                        
+                    </div>
+
+                    <!-- Botón para iniciar sesión -->
+                    <button class="login-button" type="submit">
+                        Iniciar sesión
+                    </button>
+                </form>
+
+                <!-- Enlace para recuperar contraseña -->
+                <div class="forgot-password">
+                    <a href="contraseña.html">¿Olvidó su contraseña?</a>
+                </div>
+
+                <!-- Enlace para ir al formulario de registro -->
+                <div class="account-message">
+                    <a href="registro.html">¿Aun no tienes una cuenta? <b>Registrate</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

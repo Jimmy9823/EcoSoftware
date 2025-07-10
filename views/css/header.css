@@ -1,0 +1,90 @@
+/* Variables de colores */
+:root {
+    --primary-green: #5cb85c;
+    --light-green: #d4edda;
+    --dark-green: #4a934a;
+    --gray-light: #f8f9fa;
+    --gray-medium: #e9ecef;
+    --hover-green: #4caf4c;
+}
+
+/* Estilos base */
+body {
+    background-color: var(--gray-light);
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding-top: 90px;
+}
+
+/* Navbar */
+.navbars {
+    background-color: #ffffff;
+    padding: 16px 32px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    width: 100px;
+    height: auto;
+}
+
+/* Enlaces de navegación */
+.navbar-nav .nav-link {
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--hover-green);
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+}
+
+/* Botón de búsqueda */
+.btn-outline-success {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.btn-outline-success:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: #ffffff;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+    border-radius: 8px !important;
+}
+
+.search-container .form-control {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+    border-color: var(--gray-medium);
+}
+
+.search-container .form-control:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.2rem rgba(92, 184, 92, 0.25);
+}
+
+.search-container .btn {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Responsive móviles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+    
+    .search-container {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}

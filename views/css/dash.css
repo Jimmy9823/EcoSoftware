@@ -1,0 +1,70 @@
+/* dash.css */
+.icono {
+    color: var(--primary);
+}
+.search-bar {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.search-bar input {
+    padding-left: 45px;
+    border-radius: 25px;
+    border: 2px solid var(--gray-medium);
+}
+
+.search-bar i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.status-badge {
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-accepted {
+    background: #d1edff;
+    color: #0c5460;
+}
+
+.status-completed {
+    background: var(--light-green);
+    color: var(--dark-green);
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--primary));
+    color: var(--text-light);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+ img {
+            width: 100px;
+            height: auto;
+            padding-right: 10px;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: var(--primary) !important;
+            font-weight: bold;
+        }

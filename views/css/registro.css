@@ -1,0 +1,280 @@
+ /* ============================
+           PALETA DE COLORES GLOBAL
+           ============================ */
+ :root {
+     --text-color: #ffffff;
+     --text-input: #cccccc;
+     --background-form: #1e1e1e;
+     --primary-color: hsl(122, 39%, 49%);
+     --sombra-container: rgba(0, 0, 0, 0.34);
+     --background-input: #2a2a2a;
+
+ }
+
+ /* ============================
+             ESTILOS GENERALES
+             ============================ */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ body {
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+     min-height: 100vh;
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+     position: relative;
+     padding: 20px;
+ }
+
+ /* ============================
+             CONTENEDORES PRINCIPALES
+             ============================ */
+ .container {
+     display: flex;
+     width: 100%;
+     min-height: calc(100vh - 40px);
+     position: relative;
+     z-index: 1;
+     padding: 20px;
+ }
+
+ .logo-section {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding-left: 10%;
+     color: var(--text-color);
+ }
+
+ .logo {
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px;
+ }
+
+ .logo-box {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+ }
+
+ img.logo-image {
+     width: 180px;
+     height: 80px;
+ }
+
+ .title h1 {
+     font-size: 2.5rem;
+     font-weight: 400;
+     line-height: 1.2;
+ }
+
+
+
+ /* ============================
+             FORMULARIO DE REGISTRO
+             ============================ */
+
+
+
+
+
+ .login-container {
+     flex: 1;
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+     padding: 40px 20px;
+     max-height: none;
+     overflow-y: auto;
+ }
+
+ .login-form {
+     background-color: var(--background-form);
+     color: var(--text-color);
+     padding: 40px;
+     border-radius: 10px;
+     width: 100%;
+     max-width: 450px;
+     box-shadow: 0 10px 25px var(--sombra-container);
+     margin: auto 0;
+ }
+
+ h2 {
+     font-size: 1.5rem;
+     margin-bottom: 30px;
+     font-weight: 500;
+     text-align: center;
+ }
+
+ .form-group {
+     margin-bottom: 20px;
+ }
+
+ label {
+     display: block;
+     margin-bottom: 8px;
+     font-weight: 500;
+     
+ }
+
+ input,
+ select {
+     width: 100%;
+     padding: 15px;
+     border: none;
+     border-radius: 5px;
+     background-color: var(--background-input);
+     font-size: 1rem;
+     color: var(--text-input);
+ }
+
+ input::placeholder {
+     color: var(--text-input);
+ }
+
+ /* ============================
+             BOTÓN DE REGISTRO
+             ============================ */
+ .login-button {
+     width: 100%;
+     padding: 15px;
+     background-color: var(--primary-color);
+     color: var(--text-color);
+     border: none;
+     border-radius: 5px;
+     font-weight: 500;
+     font-size: 1rem;
+     cursor: pointer;
+     margin-top: 10px;
+     transition: background-color 0.3s;
+ }
+
+ .login-button:hover {
+     background-color: hsl(122, 39%, 40%);
+ }
+
+ /* ============================
+             DESCRIPCIÓN DE ROL
+             ============================ */
+ .descripcion-rol {
+     margin-bottom: 20px !important;
+     color: var(--text-input);
+     font-size: 0.95rem;
+     padding: 15px;
+     background-color: var(--background-input);
+     border-radius: 5px;
+     border-left: 4px solid var(--primary-color);
+     border: none !important;
+     border-left: 4px solid var(--primary-color) !important;
+     background-color: var(--background-input) !important;
+     color: var(--text-input) !important;
+ }
+
+ .descripcion-rol .alert-heading {
+     color: var(--primary-color) !important;
+     font-size: 1rem;
+     font-weight: 600;
+     margin-bottom: 8px;
+ }
+
+
+ .descripcion-rol i {
+     color: var(--primary-color);
+     margin-right: 8px;
+ }
+
+ /* ============================
+             FORMULARIOS POR ROL
+             ============================ */
+ .form-content {
+     display: none;
+ }
+
+ .form-content.active {
+     display: block;
+ }
+
+ /* Selector de rol principal */
+ .role-selector {
+     margin-bottom: 25px;
+ }
+
+ 
+
+ /* ============================
+                MENSAJE DE CUENTA
+             ============================ */
+
+ .account-message {
+     text-align: center;
+     margin-top: 20px;
+ }
+
+ .account-message a {
+     color: var(--text-color);
+     text-decoration: none;
+     
+ }
+
+ /* ============================
+   ESTILOS SOLO PARA CHECKBOXES
+   ============================ */
+
+/* Contenedor flex para los checkboxes - más compacto */
+.d-flex.flex-wrap.gap-2 {
+    gap: 8px !important;
+    align-items: flex-start;
+}
+
+
+
+.form-check-input[type=checkbox] {
+    border-radius: .25em;
+    padding: 10px!important;
+}
+
+
+
+
+ 
+
+ /* ============================
+             RESPONSIVE
+             ============================ */
+ @media (max-width: 768px) {
+     .container {
+         flex-direction: column;
+         min-height: auto;
+     }
+
+     .logo-section {
+         padding: 30px 20px;
+         text-align: center;
+         align-items: center;
+     }
+
+     .title h1 {
+         font-size: 2rem;
+     }
+
+     .login-form {
+         padding: 30px;
+     }
+
+     .login-container {
+         align-items: center;
+     }
+ }
+
+ 

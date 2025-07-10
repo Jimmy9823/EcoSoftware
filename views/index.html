@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoSoftware - Inicio</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="img/logo3.png" alt="EcoSoftware" class="logo-img" />
+    </div>
+    
+    <input type="checkbox" id="menu-toggle" hidden />
+    <label for="menu-toggle" class="mobile-menu"><i class="fas fa-bars"></i></label>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="404.html">Solicitar recoleccion</a></li>
+        <li><a href="500.html">Puntos de reciclaje</a></li>
+        <li><a href="#">Capacitaciones</a></li>
+        <li><a href="#">Noticias</a></li>
+      </ul>
+    </nav>
+    <div class="user-menu">
+      <input type="checkbox" id="perfil-toggle" hidden />
+      <label for="perfil-toggle" class="user-icon"><i class="fas fa-user-circle"></i></label>
+      <div class="dropdown">
+        <a href="dashboard.html">Mi perfil</a>
+        <a href="index.html">Cerrar sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <h1>Bienvenido a EcoSoftware</h1>
+    <p>Tu herramienta inteligente para la gestión de residuos</p>
+    <div class="cta-buttons">
+      <a href="registro.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Registrarse</a>
+      <a href="login.html" class="btn btn-secondary"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+  </div>
+  </section>
+
+  <!-- Propósito -->
+  <section class="ecosoftware-purpose">
+    <div class="purpose-content">
+      <div class="text">
+        <h2>Nuestro propósito</h2>
+        <p>EcoSoftware nace con la misión de conectar ciudadanos, recicladores y empresas para construir un entorno más limpio y sostenible.</p>
+        <p>Promovemos la economía circular y el compromiso ambiental mediante tecnología accesible y colaborativa.</p>
+      </div>
+      <div class="collage">
+        <div class="collage-img"><img src="img/1.jpeg" alt=""></div>
+        <div class="collage-img"><img src="img/2.jpeg" alt=""></div>
+        <div class="collage-img"><img src="img/3.jpeg" alt=""></div>
+        <div class="collage-img"><img src=" img/4.jpeg" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-img">
+          <img src="img/SOLICITUD.png" alt="Solicitar Recolección" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Solicitar Recolección</h3>
+          <p>¿Tienes muchos residuos reciclables? Solicita una recolección y nosotros nos encargamos de llevarlos al lugar adecuado.</p>
+          <a href="#" class="btn btn-secondary">Solicitar</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="img/Puntos.png" alt="Puntos de Reciclaje" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Puntos de Reciclaje</h3>
+          <p>Encuentra los puntos de reciclaje más cercanos a tu ubicación y contribuye con el medio ambiente depositando tus residuos correctamente.</p>
+          <a href="#" class="btn btn-secondary">Ver Mapa</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="img/capacitación.png" alt="Capacitación" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Capacitación</h3>
+          <p>Accede a cursos gratuitos para mejorar tus prácticas de reciclaje.</p>
+          <a href="#" class="btn btn-secondary">Ver cursos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Datos curiosos -->
+  <section id="datos" class="recycling-facts">
+    <h2 class="facts-title">Datos curiosos sobre reciclaje</h2>
+    <div class="facts-carousel">
+      <div class="fact-card">
+        <div class="fact-icon"><i class="fas fa-recycle"></i></div>
+        <p>Reciclar una tonelada de papel ahorra más de 26,000 litros de agua.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon"><i class="fas fa-battery-full"></i></div>
+        <p>Las pilas pueden tardar más de 500 años en degradarse si no se reciclan correctamente.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon"><i class="fas fa-lightbulb"></i></div>
+        <p>Reciclar una botella de vidrio ahorra energía suficiente para encender una bombilla de 100W durante 4 horas.</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      
+      
+      
+      
+      <div class="footer-section">
+        <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@ecorecicla.com</p>
+      </div><div class="footer-section">
+        <h3>Redes Sociales</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="copyright">
+      &copy; 2025 EcoSoftware. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <a href="#inicio" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+  
+</body>
+</html>
+

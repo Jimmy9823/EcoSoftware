@@ -1,0 +1,30 @@
+/* capacitaciones.css */
+.card {
+    background-color: var(--texto-claro); /* blanco */
+    color: var(--texto-oscuro);           /* texto oscuro */
+    border: none;
+    border-radius: 12px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(206, 208, 206, 0.2); /* sombra gris claro, también podrías convertirlo a variable si lo reutilizas */
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 8px;
+}
+
+.text-success-custom {
+    color: var(--color-principal) !important;
+}
+
+
+
